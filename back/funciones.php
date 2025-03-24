@@ -4,12 +4,19 @@ function validarCodigo($codigo)
 {
     if (isset($_SESSION['productos'][$codigo])) {
         $_SESSION['producto'] = $_SESSION['productos'][$codigo];
-
-        return $_SESSION['producto'];
+        consultarProducto();
+        return  $_SESSION['producto'];
     } else {
         echo "Código de producto no encontrado.<br>";
         return false;
     }
+}
+
+function consultarProducto(){
+    echo '<script>alert("Producto Encontrado exitosamente")</script>';
+    echo '<br> Nombre: '.$_SESSION['producto']['nombre_producto'];
+    echo '<br> Unidad: '.$_SESSION['producto']['unidad'];
+    echo '<br> Stock: '.$_SESSION['producto']['existencia'];
 }
 
 function agregarPedido($nombreCliente, $valor, $cantidad)
