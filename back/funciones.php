@@ -13,14 +13,12 @@ function validarCodigo($codigo)
 }
 
 function consultarProducto(){
-    echo '<script>alert("Producto Encontrado exitosamente")</script>';
-    echo '<br> Nombre: '.$_SESSION['producto']['nombre_producto'];
-    echo '<br> Unidad: '.$_SESSION['producto']['unidad'];
-    echo '<br> Stock: '.$_SESSION['producto']['existencia'];
+    echo '<br> <b>Nombre:</b> '.$_SESSION['producto']['nombre_producto'];
+    echo '<br> <b>Unidad:</b> '.$_SESSION['producto']['unidad'];
+    echo '<br> <b>Stock:</b> '.$_SESSION['producto']['existencia'];
 }
 
-function agregarPedido($nombreCliente, $valor, $cantidad)
-{
+function agregarPedido($nombreCliente, $valor, $cantidad){
     if (!isset($_SESSION['pedidos'])) {
         $_SESSION['pedidos'] = [];
     }

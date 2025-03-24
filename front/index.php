@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <link rel="stylesheet" href="./css/styles_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Parcial - programacion</title>
 </head>
 <body>
     <header>
@@ -35,7 +39,7 @@
               <input type="text" name="codigo" class="form-control" id="codigo" placeholder="codigo">
             </div>
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+              <button type="submit" class="btn btn-success mb-3">Buscar</button>
             </div>
         </form>
 
@@ -46,8 +50,8 @@
         
         <form action="../back/nuevo_pedido.php" method="post">
             <div class="mb-3">
-                <label for="cliente" class="form-label">Nombre del cliente: </label>
-                <input type="text" name="nombreCliente" required class="form-control" id="cliente" placeholder="Ingrese nombre">
+                <label for="nombreCliente" class="form-label">Nombre del cliente: </label>
+                <input type="text" name="nombreCliente" required class="form-control" id="nombreCliente" placeholder="Ingrese nombre">
             </div>
             <div class="mb-3">
                 <label for="codigo_crear" class="form-label">Codigo de producto:</label>

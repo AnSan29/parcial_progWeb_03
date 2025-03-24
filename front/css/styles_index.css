@@ -2,10 +2,10 @@
 :root {
   --main-font: sans-serif;
   --font-size: 16px;
-  --main-color: #f7df1e;
-  --second-color: #222;
-  --main-modal-color: rgba(247, 222, 30, 0.85);
-  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --main-color: #932626;
+  --second-color: #9caccd;
+  --main-modal-color: rgba(147, 38, 38, 0.85);
+  --second-modal-color: rgba(156, 172, 205, 0.85);
   --container-width: 1200px;
 }
 /* reseteo al Html */
@@ -36,7 +36,7 @@ header {
   top: 0;
   padding: 1rem;
   background-color: var(--main-color);
-  color: var(--second-color);
+  color: #222;
 }
 header h1 {
   margin: 0auto;
@@ -111,15 +111,14 @@ section {
 }
 
 #seccion1 {
-  background-color: aqua  ;
-  display: flex; /* Activa flexbox */
-  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  height: 100vh; /* Ajusta la altura al 100% de la pantalla */
-  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 #seccion1 form {
   display: flex;
-  gap: 10px; /* Espaciado entre los elementos del formulario */
+  gap: 10px;
 }
