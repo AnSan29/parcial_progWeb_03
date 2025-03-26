@@ -55,7 +55,7 @@ session_start();
             </div>
             <div class="mb-3">
                 <label for="codigo_crear" class="form-label">Codigo de producto:</label>
-                <input type="text" name="codigo" class="form-control" id="codigo_crear" value="<?= $_SESSION['codigo']?>" placeholder="Ingrese codigo" >
+                <input type="text" name="codigo" class="form-control" id="codigo_crear" value="<?= $_SESSION['producto']['nombre_producto']?>" placeholder="Ingrese codigo" readonly>
             </div>
             <div class="mb-3">
                 <label for="cantidad" class="form-label">Cantidad:</label>

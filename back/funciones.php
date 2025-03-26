@@ -29,7 +29,9 @@ function agregarPedido($nombreCliente, $valor, $cantidad){
         "cantidad" => $cantidad
     ];
 
-    echo "Producto agregado correctamente.";
+    echo "<br>Producto agregado correctamente.";
+    echo "<br>Cliente: ".$nombreCliente;
+    echo "<br>Producto: ".$_SESSION['producto']['nombre_producto'];
     actualizarExistencia($cantidad);
 }
 
@@ -38,7 +40,7 @@ function actualizarExistencia($cantidad)
     if ($cantidad > 0 && $_SESSION['producto']['existencia'] >= $cantidad) {
         $_SESSION['producto']['existencia'] -= $cantidad;
         $_SESSION['productos'][$_SESSION['codigo']] = $_SESSION['producto'];
-        echo "<br>Venta realizada. Nuevo stock de " . $_SESSION['producto']['nombre_producto'] . ": " . $_SESSION['producto']['existencia'] . " " . $_SESSION['producto']['unidad'];
+        echo "<br>Venta realizada.";
         echo "<br>Codigo: " . $_SESSION['codigo'];
         echo "<br>Nueva existencia: " . $_SESSION['producto']['existencia'];
     } else {
@@ -66,6 +68,7 @@ function mostrarPedido()
     echo "<br>" . $_SESSION['producto']['nombre_producto'];
     echo "<br>" . $_SESSION['producto']['unidad'];
     echo "<br>" . $_SESSION['producto']['existencia'];
+
 }
 
 
