@@ -1,18 +1,8 @@
-/* reseteo inicial */
-:root {
-  --main-font: sans-serif;
-  --font-size: 16px;
-  --main-color: #932626;
-  --second-color: #9caccd;
-  --main-modal-color: rgba(147, 38, 38, 0.85);
-  --second-modal-color: rgba(156, 172, 205, 0.85);
-  --container-width: 1200px;
-}
+
+
 /* reseteo al Html */
 html {
   box-sizing: border-box;
-  font-family: var(--main-font);
-  font-size: var(--font-size);
   scroll-behavior: smooth; /* trancision fluida */
 }
 *,
@@ -39,10 +29,15 @@ header {
   height: 10%;
   display: flex;
   align-items: center;
+  background-color: #28b463;
   justify-content: flex-end; /* Mantiene el h1 a la derecha */
   padding: 10px 20px;
-  background-color: #f8f9fa5f;
   z-index: 1000; /* Asegura que quede por encima del contenido */
+}
+footer{
+  background-color: #28b463;
+  z-index: 999;
+  width: 100%;
 }
 .menu {
   position: absolute;
@@ -50,21 +45,29 @@ header {
   transform: translateX(-50%); /* Centra el menú */
   display: flex;
   gap: 30px;
-  padding: 10px;
-  border-bottom: 1px solid black;
+  padding: 15px;
   border-radius: 20px;
-  box-shadow: 0 9px 5px rgba(0, 0, 0, 0.1); /* Sombra para mejor visual */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Sombra para mejor visual */
 }
 .menu a {
   text-decoration: none;
-  color: black;
+  color: #24242c ;
   font-weight: bold;
+}
+.menu a:hover{
+  color: white;
 }
 h1 {
   margin: 0;
   white-space: nowrap;
 }
-
+.imgs{
+  background-color: #28b463;
+}
+.imgs img{
+  width: 200px !important;
+  margin: 0 auto !important;
+}
 section {
   margin-top: 10px;
   padding: 2rem;
@@ -76,9 +79,9 @@ section {
   text-align: center;
 }
 
-.seccion-inicio{
+/* .seccion-inicio{
   background-color: aquamarine;
-}
+} */
 
 .carousel-item img {
   width: 100% !important;
