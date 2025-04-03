@@ -42,7 +42,7 @@ session_start();
             </div>
         </div>
         
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide mt-3  border border-2 rounded-end overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block w-100 img-fluid" 
@@ -57,7 +57,7 @@ session_start();
                 <div class="carousel-item">
                   <img class="d-block w-100 img-fluid" 
                  
-                 alt="Imagen 3" src="https://t3.ftcdn.net/jpg/02/98/43/56/360_F_298435647_CVHuQNrfG4AU9608C4BHGozPaghXHucJ.jpg" class="d-block w-100" alt="...">
+                 alt="Imagen 3" src="https://chotanito.com/wp-content/uploads/2017/12/banner-ferreteria.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
