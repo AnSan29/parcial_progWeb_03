@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    padding-top: 40px;
+    background-image: url('../img/fondo-crear-pedido.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    width: 70%;
+    padding: 25px;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid saddlebrown;
+    border-radius: 0 30%;
+    background: lightcyan;
+}
+
+form p {
+    font-size: 18px;
+}
+
+form button {
+    width: 20% !important;
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 8px;
+    background: lightseagreen;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+        color: lightseagreen;
+        background: white;
+    }
+}

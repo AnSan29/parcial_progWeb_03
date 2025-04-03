@@ -1,7 +1,7 @@
 <?php
-session_start(); // Asegúrate de iniciar la sesión
+session_start(); 
 
-include 'funciones.php'; // Incluye el archivo donde están tus funciones
+include 'funciones.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigo = $_POST["codigo"];
@@ -17,10 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Llamar a la función para registrar la devolución
             registrarDevolucion($cantidadDevuelta);
         } else {
-            echo "Error: La cantidad devuelta debe ser mayor que 0.";
+            echo "<script>
+            let confirmacion = confirm('La cantidad debe ser mayor a 0.');
+            if (confirmacion) {
+                window.location.href = '../front/devoluciones.php';
+            }</script>";
         }
     } else {
-        echo "Error: Código de producto no encontrado.";
+        echo "<script>
+                let confirmacion = confirm('Código de producto no encontrado.');
+                if (confirmacion) {
+                    window.location.href = '../front/devoluciones.php';
+                }</script>";
     }
 } else {
     echo "Acceso no permitido.";

@@ -2,7 +2,7 @@
 session_start();
 include('funciones.php');
 
-if ($_POST) {
+if (isset($_POST['agregarPedido'])) {
     $nombreCliente = $_POST['nombreCliente'];
     $cantidad = $_POST['cantidad'];
     $valor = $_POST['valor'];

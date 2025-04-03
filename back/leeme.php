@@ -6,7 +6,7 @@
     todo esto debe ser igual para que el back funcione
 -->
 
-<form action="" method="post">
+<form action="validacion_codigo.php" method="post">
     <p>Codigo</p>
     <input type="text" name="codigo">
     <button>Buscar</button>

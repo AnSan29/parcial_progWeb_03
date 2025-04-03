@@ -2,7 +2,7 @@
 session_start();
 include 'funciones.php';
 
-if ($_POST) {
+if (isset($_POST['registrarDeterioro'])) {
     $codigo = $_POST["codigo"];
     $cantidad = $_POST["cantidad"];
 
@@ -11,9 +11,11 @@ if ($_POST) {
         $_SESSION['producto'] = $_SESSION['productos'][$codigo];
         salidaPorDeterioro($cantidad);
     } else {
-        echo "Error: Código de producto no encontrado o cantidad inválida.";
+        echo "<script>
+                let confirmacion = confirm('Código de producto no encontrado o cantidad invalida.');
+                if (confirmacion) {
+                    window.location.href = '../front/salida-deterioro.php';
+                }</script>";
     }
-} else {
-    echo "Acceso no permitido.";
 }
 ?>

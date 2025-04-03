@@ -27,7 +27,6 @@ function agregarPedido($nombreCliente, $valor, $cantidad)
     $_SESSION['pedidos'][] = [
         "nombreCliente" => $nombreCliente,
         "producto" => $_SESSION['producto'],
-        "valor" => $valor,
         "cantidad" => $cantidad
     ];
     echo "<h2>Venta realizada.</h2>";
@@ -52,12 +51,10 @@ function actualizarExistencia($cantidad)
 function mostrarPedidos()
 {
     if (isset($_SESSION['pedidos']) && !empty($_SESSION['pedidos'])) { // verificamos si pedidos existe y que no este vacio
-        echo "<h2>Pedidos:</h2>";
         foreach ($_SESSION['pedidos'] as $pedido) {
-            echo "<p>Cliente: <span>" . $pedido['nombreCliente'] . "</span></p>";
-            echo "<p>Producto: <span>" . $pedido['producto']['nombre_producto'] . "</span></p>";
-            echo "<p>Cantidad: <span>" . $pedido['cantidad'] . "</span></p>";
-            echo "<p>Valor: <span>" . $pedido['valor'] . "</span></p>";
+            echo "<tr><td>" . $pedido['nombreCliente'] . "</td>";
+            echo "<td>" . $pedido['producto']['nombre_producto'] . "</td>";
+            echo "<td>" . $pedido['cantidad'] . "</td></tr>";
         }
     } else {
         echo "<h3 style='color: red;'>No hay pedidos.</h3>";
@@ -86,11 +83,8 @@ function registrarDevolucion($cantidadDevuelta)
             echo "<p>Codigo: <span>" . $_SESSION['codigo'] . "</span></p>";
             echo "<p>Producto: <span>" . $_SESSION['producto']['nombre_producto'] . "</span></p>";
             echo "<p>Nueva existencia: <span>" . $_SESSION['producto']['existencia'] . "</span></p>";
-        } else {
-            echo "<h3 style='color: red'>Error: La cantidad devuelta debe ser mayor que 0.</h3>";
+            echo "<a href='../front/index.php'>Volver</a>";
         }
-    } else {
-        echo "<h3 style='color: red'>Error: Código de producto no encontrado.</h3>";
     }
 }
 
@@ -111,15 +105,23 @@ function salidaPorDeterioro($cantidad)
                 "cantidadDeteriorada" => $cantidad
             ];
 
-            echo "<h2>Salida por deterioro registrada con éxito. Inventario actualizado.</h2>";
+            echo "<h2>Salida por deterioro registrada con éxito.<br> Inventario actualizado.</h2>";
             echo "<p>Codigo: <span>" . $_SESSION['codigo'] . "</span></p>";
             echo "<p>Producto: <span>" . $_SESSION['producto']['nombre_producto'] . "</span></p>";
             echo "<p>Nueva existencia: <span>" . $_SESSION['producto']['existencia'] . "</span></p>";
+                
+            echo "<a href='../front/index.php'>Volver</a>";
         } else {
-            echo "<h3 style='color: red'>Error: Stock insuficiente o cantidad inválida.</h3>";
+            echo "
+                <h3 style='color: red'>Error: Stock insuficiente o cantidad inválida.</h3>
+                <a href='../front/salida-deterioro.php'>Volver</a>
+                ";
         }
     } else {
-        echo "<h3 style='color: red'>Error: Código de producto no encontrado.</h3>";
+        echo "
+            <h3 style='color: red'>Error: Código de producto no encontrado.</h3>
+            <a href='../front/salida-deterioro.php'>Volver</a>
+            ";
     }
 }
 
