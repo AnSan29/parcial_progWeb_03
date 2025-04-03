@@ -32,20 +32,42 @@ img {
 
 /* menu hamburguesa */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  padding: 1rem;
-  background-color: var(--main-color);
-  color: #222;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Mantiene el h1 a la derecha */
+  padding: 10px 20px;
+  background-color: #f8f9fa5f;
+  z-index: 1000; /* Asegura que quede por encima del contenido */
 }
-header h1 {
-  margin: 0auto;
-  text-align: center;
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el menú */
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 9px 5px rgba(0, 0, 0, 0.1); /* Sombra para mejor visual */
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+h1 {
+  margin: 0;
+  white-space: nowrap;
 }
 
 section {
   padding: 2rem;
-  padding-top: 4rem;
+  padding-top: 3rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -54,71 +76,56 @@ section {
   text-align: center;
 }
 
-.panel {
-  position: fixed;
-  z-index: 998;
-  background-color: var(--second-modal-color);
-  width: 100%;
-  top: 0;
-  bottom: 0; /* estiramos el contenido para que ocupe toda la pantalla */
-  right: 0;
-  left: 0;
-  transition: transform 0.3s ease;
-  /* propiedad para sacar el menu desde arriba */
-  transform: translate(0, -100%);
-}
-
-.panel.is-active {
-  transform: translate(0, 0);
-}
-
-.panel-btn {
-  position: fixed;
-  z-index: 999;
-  bottom: 1vh;
-  right: 1vw;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--main-color) !important;
-}
-
-.menu {
-  width: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
-.menu a {
-  padding: 2rem;
-  width: inherit;
-  display: block;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--main-color);
-  transition: all 0.3s ease;
-}
-.menu a:hover {
-  font-weight: bold;
-  color: var(--second-color);
-  background-color: var(--main-modal-color);
-}
-
 #seccion1 {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Margen superior para separar del header */
+  padding: 20px;
+}
+.pedir-codigo {
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
 }
-#seccion1 form {
+
+.pedir-codigo h1 {
+  margin-bottom: 20px;
+}
+
+form {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  flex: 0.5; /* Reduce el ancho */
+  max-width: 400px; /* Establece un ancho máximo */
+  height: 300px; /* Ajusta la altura */
+  display: flex;
+  justify-content: center; /* Centrar el carrusel */
+  align-items: center;
+  order: 2;
+  overflow: hidden; /* Evita que las imágenes sobresalgan */
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.carousel {
+  max-width: 100%; /* Ajusta el tamaño del carrusel al contenedor */
+  max-height: 100%;
+}
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsión */
 }

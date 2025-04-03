@@ -14,24 +14,34 @@ session_start();
 </head>
 <body>
     <header>
-        <h1>Pacial programación web</h1>
+        <nav class="menu">
+            <a href="#seccion1">Codigo Producto</a>
+            <a href="crear_pedido.php">Crear Pedido</a>
+            <a href="#seccion3">Seccion 3</a>
+            <a href="#seccion4">Seccion 4</a>
+            <a href="#seccion5">Seccion 5</a>
+        </nav>
+        <h1>Pacial.</h1>    
     </header>
-    <button class="panel-btn hamburger  hamburger--vortex" type="button">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-</button>
-<aside class="panel">
-    <nav class="menu">
-        <a href="#seccion1">Codigo De Producto.</a>
-        <a href="#seccion2">Crear Pedido.</a>
-        <a href="#seccion3">Seccion 3</a>
-        <a href="#seccion4">Seccion 4</a>
-        <a href="#seccion5">Seccion 5</a>
-    </nav>
-</aside>
-<main>
+
+ <main>
     <section id="seccion1" class="section">
+        <aside>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                 <div class="carousel-item active">
+                    <img src="https://static.vecteezy.com/system/resources/previews/030/316/568/large_2x/assorted-tools-displayed-on-black-background-signifying-labor-day-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/vector-gratis/trabajador-construccion-energia-electrica-equipa-pictogramas-planos-fijados-negro-amarillo_1284-6269.jpg?w=360" class="d-block w-100" alt="...">
+                </div>
+                <div class="https://img.freepik.com/fotos-premium/version-vertical-gran-conjunto-herramientas-construccion-guantes-centro-sobre-fondo-negro_275559-5501.jpg">
+                    <img src="./img/fondo.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        </aside>
+        <div class="pedir-codigo">
         <h1>Codigo De Producto.</h1>
         
         <form action="../back/validacion_codigo.php" method="post" class="row g-3">
@@ -42,10 +52,10 @@ session_start();
               <button type="submit" class="btn btn-success mb-3">Buscar</button>
             </div>
         </form>
-
+        </div>
     </section>
 
-    <section id="seccion2" class="section">
+    <!-- <section id="seccion2" class="section">
         <h1>Crear Pedido.</h1>
         
         <form action="../back/nuevo_pedido.php" method="post">
@@ -80,7 +90,7 @@ session_start();
     </section>
     <section id="seccion5" class="section">
         <h1>seccion 5</h1>
-    </section>
+    </section> -->
 </main>
 <script src="./js/index.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
