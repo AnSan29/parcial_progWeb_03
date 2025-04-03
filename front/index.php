@@ -10,6 +10,7 @@ session_start();
     <link rel="stylesheet" href="./css/styles_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Parcial - programacion</title>
 </head>
 <body>
@@ -21,26 +22,50 @@ session_start();
             <a href="#seccion4">Seccion 4</a>
             <a href="#seccion5">Seccion 5</a>
         </nav>
-        <h1>Pacial.</h1>    
     </header>
+    <section class="seccion-inicio mt-5">
+        <div class="container mt-1">
+            <div class="row">
+                <div class="col bg-primary text-white p-3 m-1 align-items-center gap-2" >
+                    <p class="m-0">Herramientas</p>
+                    <i class="fa-solid fa-screwdriver-wrench fa-lg"></i>
+                </div>
+                <div class="col bg-primary text-white p-3 m-1">
+                    <p class="m-0">Pinturas</p>
 
- <main>
-    <section id="seccion1" class="section">
-        <aside>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                 <div class="carousel-item active">
-                    <img src="https://static.vecteezy.com/system/resources/previews/030/316/568/large_2x/assorted-tools-displayed-on-black-background-signifying-labor-day-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" class="d-block w-100" alt="...">
+                    <i class="fa-solid fa-brush fa-lg"></i>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://img.freepik.com/vector-gratis/trabajador-construccion-energia-electrica-equipa-pictogramas-planos-fijados-negro-amarillo_1284-6269.jpg?w=360" class="d-block w-100" alt="...">
-                </div>
-                <div class="https://img.freepik.com/fotos-premium/version-vertical-gran-conjunto-herramientas-construccion-guantes-centro-sobre-fondo-negro_275559-5501.jpg">
-                    <img src="./img/fondo.jpg" class="d-block w-100" alt="...">
+                <div class="col bg-primary text-white p-3 m-1">
+                    <p class="m-0">Servicios</p>
+                    <i class="fa-solid fa-truck fa-lg"></i>
                 </div>
             </div>
         </div>
-        </aside>
+        
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 img-fluid" 
+                 
+                 alt="Imagen 1" src="https://ferreteriawillson.com/co/images/banner-fin-6.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 img-fluid" 
+                  
+                 alt="Imagen 2" src="https://irp-cdn.multiscreensite.com/8c6cc0f5/MOBILE/images/762d2b34-a8a9-4277-bb7c-5ad7b1477ff9.jpg?v=7.3.45002" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 img-fluid" 
+                 
+                 alt="Imagen 3" src="https://t3.ftcdn.net/jpg/02/98/43/56/360_F_298435647_CVHuQNrfG4AU9608C4BHGozPaghXHucJ.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+ 
+    </section>
+ <!--
+    <section id="seccion1" class="section">
+        
         <div class="pedir-codigo">
         <h1>Codigo De Producto.</h1>
         
@@ -54,8 +79,8 @@ session_start();
         </form>
         </div>
     </section>
-
-    <!-- <section id="seccion2" class="section">
+    
+     <section id="seccion2" class="section">
         <h1>Crear Pedido.</h1>
         
         <form action="../back/nuevo_pedido.php" method="post">
@@ -91,8 +116,6 @@ session_start();
     <section id="seccion5" class="section">
         <h1>seccion 5</h1>
     </section> -->
-</main>
-<script src="./js/index.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
