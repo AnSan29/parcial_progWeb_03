@@ -55,11 +55,7 @@ if (!isset($_SESSION['codigo'])) {
                 <p>Cantidad</p>
                 <input class="form-control" type="number" name="cantidad" required min="1" max="<?= $_SESSION['producto']['existencia'] ?>">
             </div>
-            <div class="col-md-6">
-
-                <p>Valor</p>
-                <input class="form-control" type="number" name="valor" required>
-            </div>
+           
 
             <button name="agregarPedido">Agregar</button>
             

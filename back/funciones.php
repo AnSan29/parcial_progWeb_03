@@ -19,7 +19,7 @@ function consultarProducto()
     echo '<p>Stock: <span>' . $_SESSION['producto']['existencia'] . "</span><p>";
 }
 
-function agregarPedido($nombreCliente, $valor, $cantidad)
+function agregarPedido($nombreCliente,$cantidad)
 {
     if (!isset($_SESSION['pedidos'])) {
         $_SESSION['pedidos'] = [];

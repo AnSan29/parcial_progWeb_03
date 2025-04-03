@@ -29,13 +29,13 @@ header {
   height: 10%;
   display: flex;
   align-items: center;
-  background-color: #28b463;
+  background-color: #53ca98;
   justify-content: flex-end; /* Mantiene el h1 a la derecha */
   padding: 10px 20px;
   z-index: 1000; /* Asegura que quede por encima del contenido */
 }
 footer{
-  background-color: #28b463;
+  background-color: #53ca98;
   z-index: 999;
   width: 100%;
 }
@@ -62,7 +62,7 @@ h1 {
   white-space: nowrap;
 }
 .imgs{
-  background-color: #28b463;
+  background-color: #69d0a372;
 }
 .imgs img{
   width: 200px !important;

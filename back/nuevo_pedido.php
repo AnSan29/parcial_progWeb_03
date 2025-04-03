@@ -5,9 +5,9 @@ include('funciones.php');
 if (isset($_POST['agregarPedido'])) {
     $nombreCliente = $_POST['nombreCliente'];
     $cantidad = $_POST['cantidad'];
-    $valor = $_POST['valor'];
+    
 
-    agregarPedido($nombreCliente, $valor, $cantidad);
+    agregarPedido($nombreCliente,$cantidad);
     $_SESSION['producto'] = $_SESSION['productos'][$_SESSION['codigo']];
 }
 ?>

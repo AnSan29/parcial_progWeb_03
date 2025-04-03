@@ -17,9 +17,9 @@ session_start();
     <header>
         <nav class="menu">
             <a href="crear_pedido.php">Crear Pedido</a>
-            <a href="#seccion3">Seccion 3</a>
-            <a href="#seccion4">Seccion 4</a>
-            <a href="#seccion5">Seccion 5</a>
+            <a href="devoluciones.php">Devoluciones</a>
+            <a href="salida-deterioro.php">Salidas</a>
+            <a href="lista_pedidos.php">Pedidos</a>
         </nav>
         <form action="../back/validacion_codigo.php" method="post" class="row g-3 mt-2">
             <div class="col-auto">
@@ -69,7 +69,7 @@ session_start();
             </div>
         </div>
 
-        <div class="container imgs p-5 rounded border border-4 mt-2">
+        <div class="container imgs bg-opacity-50  p-5 rounded border border-4 mt-2">
             <p class="h2 mb-3">Productos:</p>
         <div class="d-flex flex-wrap gap-3">
             <div class="card pt-5" style="width: 18rem;">
@@ -105,14 +105,14 @@ session_start();
 
         </div>
         </div>
+        
 
-
-        <div class="container mt-2">
+        <div class="container mt-5 mb-5 fs-5">
             <div class="row">
-                <div class="col m-1  gap-2 rounded">
-                   <p class="h5">🏗️ Sobre Nosotros</p>
+                <div class="col-12 m-1  gap-2 rounded">
+                   <p class="h5 fs-20px">🏗️ Sobre Nosotros</p>
                    <p>En Ferreterias Litoral    , nos especializamos en la comercialización de productos ferreteros de alta calidad para el hogar, la industria y la construcción. Como microempresa comprometida con la excelencia, ofrecemos herramientas, materiales y accesorios esenciales para cada proyecto, brindando soluciones confiables a nuestros clientes.
-Nos enorgullecemos de ofrecer atención personalizada, precios competitivos y un catálogo en constante crecimiento para satisfacer las necesidades de profesionales y entusiastas del bricolaje. ¡Confía en nosotros para hacer realidad tus proyectos con los mejores productos ferreteros! 🔧🔩🚀</p>
+                        Nos enorgullecemos de ofrecer atención personalizada, precios competitivos y un catálogo en constante crecimiento para satisfacer las necesidades de profesionales y entusiastas del bricolaje. ¡Confía en nosotros para hacer realidad tus proyectos con los mejores productos ferreteros! 🔧🔩🚀</p>      
                 </div>
             </div>
         </div>
@@ -159,8 +159,10 @@ Nos enorgullecemos de ofrecer atención personalizada, precios competitivos y un
         <h1>seccion 5</h1>
     </section> -->
     <footer>
-        <div class="container">
-        <div class="col m-1  gap-2 rounded">
+        <div class="container d-flex justify-content-between align-items-start flex-wrap p-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5820681834657!2d-74.81635432403556!3d10.994884989167495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d0f33f9d46d%3A0x4058b351ff3e4d61!2sCorporaci%C3%B3n%20de%20Educaci%C3%B3n%20Superior%20del%20Litoral!5e0!3m2!1ses!2sco!4v1743702992407!5m2!1ses!2sco" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="col m-1  gap-2 rounded">
                     <p class="h5">Contáctanos.</p>
                     <div class="mb-1">
                         <label for="nombre_user.txt" class="form-label">Nombre</label>
